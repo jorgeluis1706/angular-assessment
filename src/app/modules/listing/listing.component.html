@@ -1,0 +1,14 @@
+<section id="listing-layout">
+  <div class="listing-layout__header text-center">
+    <img src="/assets/house-searching.svg" alt="house-searching" width="300" height="250">
+    <h2 class="mat-sys-headline-medium">Search Properties</h2>
+    <h4>Look up for rent properties in the United States in an easy way.</h4>
+  </div>
+  <div class="listing-layout__content">
+    <app-listing-search-form (formSubmit)="searchListing($event)"/>
+
+    @if (listings.length > 0){
+      <app-listing-search-results-table [listingData]="listings"/>
+    }
+  </div>
+</section>
