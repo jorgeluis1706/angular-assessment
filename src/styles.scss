@@ -2,14 +2,23 @@
 @use '@angular/material' as mat;
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
 html {
   @include mat.theme((
     color: mat.$azure-palette,
   ));
 }
 
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
 .text-center{
   text-align: center;
+}
+
+.red-snackbar {
+  @include mat.snack-bar-overrides((
+    container-color: #A52A2A,
+    supporting-text-color: white,
+    button-color: white
+  ));
 }
